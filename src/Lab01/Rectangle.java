@@ -8,18 +8,21 @@
 package Lab01;
 
 public class Rectangle {
-    private double length;
-    private double width;
+    double length;
+    double width;
     
-    public Rectangle() {
-        length = 0;
-        width = 0;
+    private Rectangle() {
+        length = 1;
+        width = 1;
     }
     public Rectangle(double length,double width){
             this.length = length;
             this.width = width;
     }
-    public double calcArea() {
+    public double getArea(){
         return length * width;
+    }
+    public double getPerimeter() {
+        return 2 * (width + length);
     }
 }
