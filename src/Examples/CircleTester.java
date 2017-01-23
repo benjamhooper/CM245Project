@@ -27,6 +27,6 @@ public class CircleTester {
         System.out.print(" is ");
         System.out.printf("%1.2f", c.calcArea());
         System.out.print(" and circumference ");
-        System.out.printf("%1.2f", c.calcCirumference());
+        System.out.printf("%1.2f\n", c.calcCirumference());
     }
 }
