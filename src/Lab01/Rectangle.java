@@ -1,14 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+* Rectangle 
+* Takes width and height calculates the area    
+* @author Benjamin Hooper
+* @version 1.0
+*/
+
 package Lab01;
 
-/**
- *
- * @author Ben
- */
 public class Rectangle {
     private double length;
     private double width;
