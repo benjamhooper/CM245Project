@@ -1,6 +1,5 @@
 Collection CM245 Projects
 ======
-Collection of my CM245 Projects
 #### Disclaimer: Some of the content may include sample code from professor/book
 
 ## Contact
