@@ -7,14 +7,14 @@ package Examples;
 public class Circle {
     //properties
     private double radius;
-    
+        
     public Circle() {
         radius = 0;
     }
     public Circle(double radius){
         this.radius = radius; 
     }
-    public double getradius(){
+    public double getRadius(){
         return radius;
     }
     public void setRadius(double radius) {
