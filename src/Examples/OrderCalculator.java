@@ -22,7 +22,7 @@ public class OrderCalculator {
         
         //output the result to the terminal
         System.out.print("The area of a circle with radius ");
-        System.out.printf("%1.2f", c.getradius());
+        System.out.printf("%1.2f", c.getRadius());
         System.out.print(" is ");
         System.out.printf("%1.2f\n", c.calcArea());
     }
