@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package chapter10;
 
 /**
@@ -24,11 +20,11 @@ public class BookTester {
       System.out.println(chapters[i].getName() + "Page Ct; " 
               + chapters[i].getPageCt());
     
-    
+    /*
     System.out.println();
     System.out.print("Number of students in course2: "
       + course2.getNumberOfStudents());  
-/*
+
     course1.addStudent("Peter Jones");
     course1.addStudent("Brian Smith");
     course1.addStudent("Anne Kennedy");
