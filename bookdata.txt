@@ -1,0 +1,4 @@
+
+VBA For Modelers
+Intro to VBA,10
+The Excel Object Model,8
