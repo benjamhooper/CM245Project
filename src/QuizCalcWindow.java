@@ -83,16 +83,16 @@ class SongManager {
         list.remove(s);
     }
     
-    public Song get (String title){
-        for (int i = 0; i < list.size(); i++)
-            if (list.get(i) == )
-                 return list.get(i);
-            else return null;
-    }
+//    public Song get (String title){
+//        for (int i = 0; i < list.size(); i++)
+//            //if (list.get(i) == )
+//                 return list.get(i);
+//            //else return null;
+//    }
     
-    public double getAvgLength(){
+    //public double getAvgLength(){
         
-    }
+    //}
 }
 
 class Song {
