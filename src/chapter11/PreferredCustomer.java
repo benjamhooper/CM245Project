@@ -27,5 +27,10 @@ public class PreferredCustomer extends Customer {
     public void setDiscount(double discount) {
         this.discount = discount;
     }
+    public String toString() {
+        String s = super.toString();
+        s = s + ", Discount = " + getDiscount();
+        return s;
+    }
 
 }

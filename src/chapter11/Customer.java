@@ -12,6 +12,7 @@ public class Customer {
     /**
      * @return the name
      */
+    public double getDiscount() {return 0;}
     public String getName() {
         return name;
     }
@@ -36,7 +37,10 @@ public class Customer {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    
+    public String toString(){
+        return "Name = " + getName() + 
+               "\nPhone = " + getPhone();
+    }
     
 
 }
