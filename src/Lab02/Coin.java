@@ -11,49 +11,18 @@ public class Coin {
     private double value;
 
     //Constructors
-     public Coin(String name, double value) {
-        setName("PENNY");
-        setValue(0.01);
-        setName("NICKEL");
-        setValue(0.05);
-        setName("DIME");
-        setValue(0.10);
-        setName("QUARTER");
-        setValue(0.25);
-    }
-
+     public Coin(){
+     }
+     
+     public Coin(String name, double value){
+         setName(name);
+         setValue(value);
+     }
+     
     Coin(String name) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    /*Coin(String name) {
-        switch (name) {
-            case "dollar":
-                setValue(100);
-                break;
-            case "half dollar":
-                setValue(50);
-                break;
-            case "quarter":
-                setValue(25);
-                break;
-            case "dime":
-                setValue(10);
-                break;
-            case "nickel":
-                setValue(5);
-                break;
-            case "penny":
-                setValue(1);
-                break;
-            default:
-                setValue(0);
-                System.out.print("invalid coin: " + name + "\n");
-                break;
-        }
-        setName(name);
-    }
-*/
-    //get:set
+    
     private void setName(String name) {
         this.name = name;
     }
@@ -73,5 +42,13 @@ public class Coin {
     //methods
     public String toString() {
         return "Name=" + name + ",Value=" + value;
+    }
+
+    void getValue(double coinValue) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void getName(String coinName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -3,76 +3,55 @@
  */
 package Lab02;
 
+import java.io.FileNotFoundException;
 import java.util.*;
+import java.io.File;
+
 
 public class Purse {
 
-public static int MAX_Coin = 10;
-
-    public static void main(String args[]) {
-
-        int i;
-        for (i = 0; i < 10; i++) {
-      Coin[]=Lab02.Coin[];
-      Coin = new Coin[1]("DIME",double 0.10);
-      Coin[2] = new Coin("NICKEL", double 0.05);
-      Coin[3] = new Coin("PENNY", double 0.01);
-      Coin[4] = new Coin("PENNY", double 0.01);
-      Coin[5] = new Coin("QUARTER", double 0.25);
-      Coin[6] = new Coin("DIME", double 0.10);
-    }
-     
-}
-    private double[] Coin;
-    private int numberOfCoin;
-
-    public double maxValue() {
-        return 0.25;
-    }
-
-    public String maxCoin() {
-        return ("QUARTER");
-    }
-
-    public void add(Coin aCoin) {
-        if (getNumberOfCoin() < MAX_Coin) {
-            Coin[getNumberOfCoin()] = aCoin;
-            numberOfCoin++;
-        }
-
-    public double getNumberOfCoin() {
-        return numberOfCoin;
-    }
-
-    public double sum() {
-        return Coin[1] + Coin[2] + Coin[3] + Coin[4] + Coin[6] + Coin[7] + Coin[8];
-    }
-
-}
-    /*
-    private ArrayList<Coin> coins;
+    private Coin[] list;
+    private static final int MAX_Coin = 10;
+    private int cnt = 0;
 
     public Purse() {
-        coins = new ArrayList<Coin>();
+        list = new Coin[MAX_Coin];
     }
 
     public void add(Coin c) {
-        coins.add(c);
+        if (cnt < MAX_Coin) {
+            list[cnt] = c;
+            cnt++;
+        }
     }
+    public void load() throws FileNotFoundException {
+        Scanner in = new Scanner(new File("coins.data"));
+        while (in.hasNext()) {
+            String rec = in.nextLine();
 
-    public void remove(int r) {
-        coins.remove(r);
+            String[] fields = rec.split(",");
+
+            String coinName = fields[0].trim();
+            
+            double coinValue = Integer.parseInt(fields[1].trim());
+            
+            Coin c = new Coin();
+            c.getName(coinName);
+            c.getValue(coinValue);
+            
+            add(c);
+        }
     }
 
     public void print() {
-        for (int k = 0; k < coins.size(); k++) {
-            Coin c = coins.get(k);
-            System.out.println("coin: " + c.getName() + " value: " + c.getValue());
-
+        for (int k = 0; k < cnt; k++) {
+            System.out.println("Name = "
+                    + list[k].getName()
+                    + "Num = " + list[k].getValue());
         }
-        System.out.println("Total Value: " + getTotal());
     }
-
+  }
+    /*
     public double getTotal() {
         double totalValue = 0;
         for (int k = 0; k < coins.size(); k++) {
@@ -82,4 +61,4 @@ public static int MAX_Coin = 10;
         return totalValue;
     }
 }
-*/
+     */
