@@ -18,12 +18,8 @@ public class Coin {
          setName(name);
          setValue(value);
      }
-     
-    Coin(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    private void setName(String name) {
+ 
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -31,7 +27,7 @@ public class Coin {
         return name;
     }
 
-    private void setValue(double value) {
+    public void setValue(double value) {
         this.value = value;
     }
 
@@ -42,13 +38,5 @@ public class Coin {
     //methods
     public String toString() {
         return "Name=" + name + ",Value=" + value;
-    }
-
-    void getValue(double coinValue) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void getName(String coinName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

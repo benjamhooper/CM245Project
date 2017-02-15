@@ -4,24 +4,20 @@
 
 package Lab02;
 
+import java.io.FileNotFoundException;
+
 public class PurseTester {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Purse purse1 = new Purse();
-        Coin newCoin = new Coin("QUARTER");
-        purse1.add(newCoin);
-
-        newCoin = new Coin("DIME");
-        purse1.add(newCoin);
-
-        purse1.add(new Coin("NICKEL"));
-        purse1.add(new Coin("NICKEL"));
-        purse1.add(new Coin("DIME"));
-        purse1.add(new Coin("PENNY"));
-
+        purse1.load();
+        System.out.println("Max Coin: " + purse1.maxValue());
+        purse1.remove(0.01);
         purse1.print();
-        double centAmmount = purse1.getTotal();
-        double dollarAmmount = centAmmount / 100;
-        System.out.println("total ammount in dollars: $" + dollarAmmount);
+        System.out.printf("\n");
+        purse1.add(new Coin("DIME",0.10));
+        purse1.add(new Coin("DIME",0.10));
+        purse1.print();
+        //
     }
 }

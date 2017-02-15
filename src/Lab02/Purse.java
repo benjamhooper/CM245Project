@@ -17,7 +17,29 @@ public class Purse {
     public Purse() {
         list = new Coin[MAX_Coin];
     }
-
+    
+    public String maxValue(){
+        String result = "";
+        double currentMax = 0;
+        for(int i = 0; i < cnt; i++){
+            if(currentMax < list[i].getValue()){
+                currentMax = list[i].getValue();
+                result = list[i].getName() + " = " + currentMax; 
+            }
+        }
+        return result;
+    }
+    public void remove(double rmValue) {
+        for(int i = 0; i < cnt; i++){
+        if (rmValue == list[i].getValue()) {
+            list[i].setValue(0);
+            list[i].setName("");
+            cnt--;
+            break;
+        }
+        
+      }
+    }
     public void add(Coin c) {
         if (cnt < MAX_Coin) {
             list[cnt] = c;
@@ -33,11 +55,11 @@ public class Purse {
 
             String coinName = fields[0].trim();
             
-            double coinValue = Integer.parseInt(fields[1].trim());
+            double coinValue = Double.parseDouble(fields[1].trim());
             
             Coin c = new Coin();
-            c.getName(coinName);
-            c.getValue(coinValue);
+            c.setName(coinName);
+            c.setValue(coinValue);
             
             add(c);
         }
@@ -47,18 +69,7 @@ public class Purse {
         for (int k = 0; k < cnt; k++) {
             System.out.println("Name = "
                     + list[k].getName()
-                    + "Num = " + list[k].getValue());
+                    + " Num = " + list[k].getValue());
         }
-    }
-  }
-    /*
-    public double getTotal() {
-        double totalValue = 0;
-        for (int k = 0; k < coins.size(); k++) {
-            Coin c = coins.get(k);
-            totalValue = totalValue + c.getValue();
-        }
-        return totalValue;
     }
 }
-     */
