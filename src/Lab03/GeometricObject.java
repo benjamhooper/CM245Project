@@ -1,6 +1,7 @@
+/**
+ * @author Benjamin Hooper
+ */
 package Lab03;
-
-import chapter11.*;
 
 public class GeometricObject {
   private String color = "white";
