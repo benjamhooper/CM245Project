@@ -1,20 +1,22 @@
 package AggregationWithArrayList;
 
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Assembly {
+
     //private Part[] list;  //parts list
     private ArrayList<Part> list;
-    private static final int SIZE = 5; 
-    private int cnt = 0;
+    private static final int SIZE = 5;
+
+    //private int cnt = 0;
     public Assembly() {
         //list = new Part[SIZE];
         list = new ArrayList<>();
     }
+
     public void remove(String pName) {
         /*
         for (int k=0; k<cnt; k++) {
@@ -24,12 +26,24 @@ public class Assembly {
                 list[cnt] = null;
             }
         }
-        */
-        Part p = new Part(1,pName);
-        list.remove(p);
-        
-        
+         */
+        for (int k = 0; k < list.size(); k++) {
+            if (list.get(k).getName().equals(pName)) {
+                list.remove(k);
+                return;
+            }
+        }
     }
+
+    public void remove(Part p) {
+        list.remove(p);
+    }
+
+    public void remove(String pName, int pNum) {
+        Part p = new Part(pNum, pName);
+        list.remove(p);
+    }
+
     public void add(Part p) {
         list.add(p);
         /*
@@ -37,16 +51,18 @@ public class Assembly {
             list[cnt] = p;
             cnt++;
         }
-*/
-    }
-    public void load() throws FileNotFoundException {
         
+         */
+    }
+
+    public void load() throws FileNotFoundException {
+
         Scanner in = new Scanner(new File("parts_data.txt"));
         while (in.hasNext()) {  //while !EOF
             //read record from input
             String rec = in.nextLine();
             //split record into fields
-            String[] fields = rec.split(","); 
+            String[] fields = rec.split(",");
             //trim the name 
             String partName = fields[1].trim();
             //trim and parse the number
@@ -61,6 +77,7 @@ public class Assembly {
         }
 
     }
+
     public void print() {
         /*
         for (int k = 0; k < cnt; k++) {
@@ -68,13 +85,13 @@ public class Assembly {
                     + list[k].getName() +
                     "  Num = " + list[k].getNum());
         }    
-*/
+         */
         System.out.println("----------");
         for (int k = 0; k < list.size(); k++) {
-            System.out.println("Name = " 
-                    + list.get(k).getName() +
-                    "  Num = " + list.get(k).getNum());
-        } 
-        
-    }   
+            System.out.println("Name = "
+                    + list.get(k).getName()
+                    + "  Num = " + list.get(k).getNum());
+        }
+
+    }
 }

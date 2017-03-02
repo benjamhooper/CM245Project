@@ -1,9 +1,5 @@
 package AggregationWithArrayList;
 
-/**
- *
- * @author zzschmid
- */
 public class Part {
 
     private int num;
@@ -17,7 +13,9 @@ public class Part {
     public boolean equals(Object o) {
         if (o instanceof Part) {
             Part otherPart = (Part)o;
-            return this.getName().equals(otherPart.getName());  
+            if (this.getNum() == otherPart.getNum() && 
+                this.getName().equals(otherPart.getName()))  
+            return true;
         } 
         return false;
     }
