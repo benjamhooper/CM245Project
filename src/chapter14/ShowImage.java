@@ -13,7 +13,7 @@ public class ShowImage extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     // Create a pane to hold the image views
-    Pane pane = new HBox(10);
+    Pane pane = new HBox(200);
     pane.setPadding(new Insets(5, 5, 5, 5));
     Image image = new Image("image/us.gif");
     pane.getChildren().add(new ImageView(image));

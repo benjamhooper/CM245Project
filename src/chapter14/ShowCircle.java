@@ -15,13 +15,13 @@ public class ShowCircle extends Application {
     circle.setCenterX(100);
     circle.setCenterY(100);
     circle.setRadius(50);
-    circle.setStroke(Color.BLACK);
-    circle.setFill(null);
+    circle.setStroke(Color.PINK);
+    circle.setFill(Color.BLUE);
     
     // Create a pane to hold the circle 
     Pane pane = new Pane();
     pane.getChildren().add(circle);
-    
+
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane, 200, 200);
     primaryStage.setTitle("ShowCircle"); // Set the stage title

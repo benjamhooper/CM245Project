@@ -30,7 +30,7 @@ public class ShowGridPane extends Application {
     pane.add(new TextField(), 1, 2);
     Button btAdd = new Button("Add Name");
     pane.add(btAdd, 1, 3);
-    GridPane.setHalignment(btAdd, HPos.RIGHT);
+    GridPane.setHalignment(btAdd, HPos.LEFT);
     
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane);
