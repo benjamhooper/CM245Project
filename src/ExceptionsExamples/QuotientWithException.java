@@ -1,4 +1,4 @@
-package chapter12;
+package ExceptionsExamples;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -21,15 +21,18 @@ public class QuotientWithException {
             System.out.print("Enter two integers: ");
             int number1 = input.nextInt();
             int number2 = input.nextInt();
+
             int result = quotient(number1, number2);
             System.out.println(number1 + " / " + number2 + " is "
                     + result);
         } catch (ArithmeticException ex) {
-            System.out.println("Exception: an integer "
-                    + "cannot be divided by zero ");
+             System.out.println(ex.getMessage());
+             //System.out.println("Exception: an integer "
+             //       + "cannot be divided by zero ");
         } catch (InputMismatchException ex) {
-            System.out.println("Exception : Please enter 2 valid integar values");
-                    }
+            System.out.println("Exception: please enter an integer value");
+        }
+
         System.out.println("Execution continues ...");
     }
 }

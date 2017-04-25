@@ -16,7 +16,7 @@ public class Loan {
     */
   public Loan(double annualInterestRate, int numberOfYears,
       double loanAmount) {
-    this.annualInterestRate = annualInterestRate;
+    this.setAnnualInterestRate(annualInterestRate);
     this.numberOfYears = numberOfYears;
     this.loanAmount = loanAmount;
     loanDate = new java.util.Date();
@@ -29,6 +29,8 @@ public class Loan {
 
   /** Set a new annualInterestRate */
   public void setAnnualInterestRate(double annualInterestRate) {
+      if (annualInterestRate > 100)
+          throw new IllegalArgumentException("Invaild Rate");
     this.annualInterestRate = annualInterestRate;
   }
 

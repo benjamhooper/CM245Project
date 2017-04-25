@@ -71,7 +71,8 @@ public class Loan {
     return totalPayment;    
   }
 
-  /** Return loan date */
+  /** Return loan date
+     * @return  */
   public java.util.Date getLoanDate() {
     return loanDate;
     

@@ -38,7 +38,7 @@ public class ShowRectangle extends Application {
     // Create a scene and place it in the stage
     Scene scene = new Scene(new BorderPane(group), 250, 150);
     primaryStage.setTitle("ShowRectangle"); // Set the stage title
-    primaryStage.setScene(scene); // Place the scene in the stage
+    primaryStage.setScene(scene); // Place the scene in the stag
     primaryStage.show(); // Display the stage
   }
   
