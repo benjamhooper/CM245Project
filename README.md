@@ -5,5 +5,5 @@ Collection CM245 Projects
 ## Contact
 #### Benjamin
 * http://benhooper.org
-* email: benjamin[dot]hooper[at]washurn[dot]edu
+* email: me[at]benhooper[dot]org
 * Twitter: [@benjamhooper](https://twitter.com/benjamhooper "benjamhooper on twitter")
